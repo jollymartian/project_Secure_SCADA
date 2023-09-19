@@ -1,0 +1,9 @@
+Manual: 03 %IX0.0
+
+pwr_plant: 08 %QX0.0
+led_green: 10 %QX0.1
+led_red: 16 %QX0.2
+vape_start: 18 %QX0.3
+vape_reset: 22 %QX0.4
+vape: 24 %QX0.5
+
