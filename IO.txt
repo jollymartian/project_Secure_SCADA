@@ -1,4 +1,5 @@
-Manual: 03 %IX0.0
+Manual: 03 %IX0.0              --MODBUS %QX0.7
+Manual1: 05 %IX0.1             --MODBUS %QX0.6
 
 pwr_plant: 08 %QX0.0
 led_green: 10 %QX0.1
