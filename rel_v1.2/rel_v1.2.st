@@ -96,6 +96,7 @@ PROGRAM aplha
   END_VAR
   VAR
     temp_alarm AT %QX0.6 : BOOL;
+    max_temp_alarm AT %QX99.7 : BOOL;
   END_VAR
   VAR
     _TMP_GT12_OUT : BOOL;
@@ -123,9 +124,10 @@ PROGRAM aplha
   threshold_min_output_pwr := _TMP_GT5_OUT;
   TP_WITH_RESET1(IN := NOT(temp_pulse) AND temp_up, PT := T#1s);
   TP2(IN := TP_WITH_RESET1.Q, PT := T#2s);
-  temp_pulse := TP2.Q;
   R_TRIG1(CLK := TP2.Q);
   CTU0(CU := R_TRIG1.Q, R := pwr_hospital_on, PV := max_temp);
+  max_temp_alarm := CTU0.Q;
+  temp_pulse := TP2.Q;
   current_temp := CTU0.CV;
   _TMP_GT22_OUT := GT(current_temp, temp_threshold);
   temp_alarm := _TMP_GT22_OUT;
