@@ -1,4 +1,4 @@
 # project_Secure_SCADA
 
-GitHub repository for project_ software.
+Secure_SCADA_v1.0: Programming. Open with OpenPLC editor.
 
